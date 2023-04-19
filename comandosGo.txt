@@ -1,0 +1,3 @@
+##inicializar projeto em go
+    go mod init github.com/giovannidm2-js/chatservice
+    
