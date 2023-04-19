@@ -1,0 +1,31 @@
+##listar containers rodando
+    $docker ps
+    
+##listar containers que rodaram
+    $docker ps -a
+
+##mudar a porta da aplicação
+    $docker run -p 4000:80 nginx
+
+##acessar bash do containaer
+    $docker exec -it youthful_engelbart bash
+
+##compartilhar pasta local para compartilhar no containers
+     $docker run -p 4000:80 -v ${pwd}/html:/usr/share/nginx/html nginx
+
+##fazer o build de uma imagem a partir de um DockerFile criado
+    docker build -t imagenginxexemplo . 
+
+##para rodar a imagem criada
+    docker run -p 4000:80 imagenginxexemplo
+
+##criacao de um arquivo docker-compose.yaml e iniciar servico através DockerFile
+    criar arquivo "docker-compose.yaml
+    para rodar
+        docker-compose up -d
+    para verificar
+        docker ps    
+
+##para remover docker do compose
+    docker-compose down
+
